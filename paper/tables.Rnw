@@ -1,0 +1,120 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath}
+\usepackage[margin=2cm, bottom=1cm, top=1cm]{geometry}
+\usepackage{changepage}
+\usepackage{rotating}
+\renewcommand{\tabcolsep}{3pt}
+\renewenvironment{table*}[1][1]{
+  % \setlength{\columnsep}{1pt}  
+  % \renewcommand{\tabcolsep}{2pt}
+  \begin{table}[#1]\footnotesize
+    \begin{adjustwidth}{-1cm}{}
+    }{
+    \end{adjustwidth}
+  \end{table}}
+\title{Estimation By Subject}
+\begin{document}
+\maketitle
+
+<< init, include = F>>=
+library(plyr)
+library(knitr)
+library(xtable)
+
+opts_chunk$set(echo = F, results = "asis", echo = F, warning = F, cache = F)
+options(xtable.table.placement = "!htb")
+
+source("../utils.R")
+load("../data/data.RData")
+## load("../res_rep.RData")
+load("../estim/res_ind.RData")
+load("../estim/res_PT.RData")
+attach(data_ind)
+
+## res_ind$CEU_w <- CEU_w(1:48, w = w_Prelec_a)
+## res_ind$PT_w <- PT_w(1:48, use_u = F, w = w_Prelec_a)
+## save(res_ind, file = "../res_ind.RData")
+
+## HLM_pll <- read.table("../data/hey_pred_ll.txt", T)
+## HLM_pll <- HLM_pll[order(HLM_pll$Sid), ]
+## rownames(HLM_pll) <- HLM_pll$Sid
+## HLM_pll$Sid <- NULL
+## names(HLM_pll) <- gsub("Model", "", names(HLM_pll))
+
+@ 
+
+\section{All models}
+\label{sec:mean-pred-likel}
+\label{sec:all-models}
+
+<<mprelike>>=
+
+tpll <- sane_names(cbind(HLM_pll, PT_w_no_u = res_ind$PT_w_no_u$lpred))
+means_df <- rbind(All = colMeans(tpll[-35, ]), 
+                  do.call(rbind, by(tpll, treatments, numcolwise(mean))))
+means_df <- means_df[, order(means_df[1, ], decreasing = T)]
+print_tables(means_df, "1_mean_plike", "Mean predicted log likelihoods for the three treatments, and overall.")
+
+@
+
+<<winners>>=
+
+print_tables(get_max_df(tpll, treatments),
+             "2_winners_with_SPT",  "Number of subject for whom a theory predicts best.", digits = 0)
+
+@ 
+
+<<wilcox>>=
+
+ord <- order(colwise(mean)(tpll, trim = .1), decreasing = T)
+tpll <- tpll[ord]
+
+print_tables(count_sig(tpll), "3_sig_counts_all_models", "Pairwise comparison of theories. Counts $m^{\\textstyle n}$ mean that the row model is better for $m$ subjects and the column model is better for $n$ subjects. The fit is measured by predicted log likelihoods and significance levels are conventional (* $< .05$, ** $< .01$, *** $< .001$)", 
+             floating.environment = "table*") 
+@ 
+
+
+<<all_models>>=
+
+print_tables(get_central_df(tpll), 
+             "4_all_models_means", "Means, trimed means and medians for all models (sorted on trimed mean$_{.1}$).")
+
+@ 
+
+\clearpage
+\section{PT analysis}
+\label{sec:pt-analysis}
+
+<<PT_analysis>>=
+
+tpll <- sane_names(as.data.frame(sapply(res_PT[nms_all], "[[", "lpred")))
+tpll[, "EU"] <- HLM_pll[, "EU"] ## use HLM's lpred
+tpll <- tpll[order(colwise(mean)(tpll, trim = .1), decreasing = T)]
+
+print_tables(get_central_df(tpll),
+             "_means_PT_models", "Means, trimed means and medians for all models (sorted on trimed mean$_{.1}$.")
+
+## print_tables(wilk(tpll), "wilcox_text_PT_models", "Pairwise comparisons of models using Wilcoxon signed rank test", 
+##              floating.environment = "table*")
+
+print_tables(count_sig(tpll), "5_sig_counts_PT_models", 
+             "Pairwise comparison of the variations of Prospect Theory. Interpretation of the counts and significance levels are as in Table~\\ref{table3_sig_counts_all_models}.", 
+             ## size = "\\renewcommand{\\tabcolsep}{1.5pt} \\footnotesize", 
+             floating.environment = "table*")
+
+@ 
+
+
+<<pt_vs_mm>>=
+
+tpll <- sane_names(as.data.frame(sapply(res_PT[nms_main], "[[", "lpred")))
+tpll <- tpll[order(colwise(mean)(tpll, trim = .1), decreasing = T)]
+HLM_pll <- HLM_pll[order(colwise(mean)(HLM_pll, trim = .1), decreasing = T)]
+
+print_tables(count_table(HLM_pll, tpll), "6_PT_variations_vs_other_models", 
+             "Variations of PT versus other models")
+
+@ 
+
+
+\end{document}

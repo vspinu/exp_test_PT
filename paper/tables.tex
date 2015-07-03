@@ -1,0 +1,252 @@
+\documentclass[a4paper]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage{amsmath}
+\usepackage[margin=2cm, bottom=1cm, top=1cm]{geometry}
+\usepackage{changepage}
+\usepackage{rotating}
+\renewcommand{\tabcolsep}{3pt}
+\renewenvironment{table*}[1][1]{
+  % \setlength{\columnsep}{1pt}  
+  % \renewcommand{\tabcolsep}{2pt}
+  \begin{table}[#1]\footnotesize
+    \begin{adjustwidth}{-1cm}{}
+    }{
+    \end{adjustwidth}
+  \end{table}}
+\title{Estimation By Subject}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+\maketitle
+
+
+
+\section{All models}
+\label{sec:mean-pred-likel}
+\label{sec:all-models}
+
+% latex table generated in R 3.1.1 by xtable 1.7-4 package
+% Tue Jun 16 15:20:40 2015
+\begin{table}[!htb]
+\centering
+\begin{tabular}{rrrrrrrrrrrr}
+  \hline
+ & SPT & MxEU & MnEU & $\alpha$MM & EU & DFT & CEU & EV & MaxMin & MaxMax & MinReg \\ 
+  \hline
+All & -3.85 & -3.92 & -4.31 & -4.32 & -4.43 & -4.57 & -5.53 & -11.50 & -13.31 & -14.06 & -14.58 \\ 
+  1 & -2.60 & -2.82 & -3.13 & -2.79 & -3.44 & -3.50 & -3.22 & -12.15 & -12.57 & -14.52 & -14.48 \\ 
+  2 & -5.20 & -5.14 & -5.70 & -5.58 & -5.61 & -5.93 & -6.35 & -11.03 & -14.17 & -14.45 & -14.86 \\ 
+  3 & -3.90 & -3.96 & -28.73 & -29.19 & -4.39 & -4.53 & -8.68 & -11.34 & -13.14 & -12.94 & -14.29 \\ 
+   \hline
+\end{tabular}
+\caption{Mean predicted log likelihoods for the three treatments, and overall.} 
+\label{table1_mean_plike}
+\end{table}
+
+
+% latex table generated in R 3.1.1 by xtable 1.7-4 package
+% Tue Jun 16 15:20:40 2015
+\begin{table}[!htb]
+\centering
+\begin{tabular}{rrrrrrrrrrrr}
+  \hline
+ & SPT & DFT & CEU & MxEU & $\alpha$MM & EU & MnEU & EV & MaxMax & MaxMin & MinReg \\ 
+  \hline
+All & 9 & 8 & 7 & 7 & 6 & 5 & 4 & 1 & 1 & 0 & 0 \\ 
+  1 & 2 & 3 & 3 & 4 & 1 & 0 & 2 & 0 & 0 & 0 & 0 \\ 
+  2 & 4 & 2 & 3 & 1 & 2 & 4 & 0 & 1 & 0 & 0 & 0 \\ 
+  3 & 3 & 3 & 1 & 2 & 3 & 1 & 2 & 0 & 1 & 0 & 0 \\ 
+   \hline
+\end{tabular}
+\caption{Number of subject for whom a theory predicts best.} 
+\label{table2_winners_with_SPT}
+\end{table}
+
+
+% latex table generated in R 3.1.1 by xtable 1.7-4 package
+% Tue Jun 16 15:20:40 2015
+\begin{table*}[!htb]
+\centering
+\begin{tabular}{rllllllllll}
+  \hline
+ & SPT & MxEU & $\alpha$MM & MnEU & EU & DFT & CEU & EV & MaxMin & MaxMax \\ 
+  \hline
+MxEU & $21^{\stackrel{\textstyle27\hfill}{\scriptscriptstyle\hfill}}$ & - & - & - & - & - & - & - & - & - \\ 
+  $\alpha$MM & $19^{\stackrel{\textstyle29\hfill}{\scriptscriptstyle\hfill}}$ & $21^{\stackrel{\textstyle16\hfill}{\scriptscriptstyle\hfill}}$ & - & - & - & - & - & - & - & - \\ 
+  MnEU & $13^{\stackrel{\textstyle35\hfill}{\scriptscriptstyle**\hfill}}$ & $18^{\stackrel{\textstyle30\hfill}{\scriptscriptstyle*\hfill}}$ & $18^{\stackrel{\textstyle27\hfill}{\scriptscriptstyle\hfill}}$ & - & - & - & - & - & - & - \\ 
+  EU & $15^{\stackrel{\textstyle33\hfill}{\scriptscriptstyle*\hfill}}$ & $16^{\stackrel{\textstyle31\hfill}{\scriptscriptstyle*\hfill}}$ & $16^{\stackrel{\textstyle32\hfill}{\scriptscriptstyle\hfill}}$ & $15^{\stackrel{\textstyle29\hfill}{\scriptscriptstyle\hfill}}$ & - & - & - & - & - & - \\ 
+  DFT & $16^{\stackrel{\textstyle32\hfill}{\scriptscriptstyle**\hfill}}$ & $15^{\stackrel{\textstyle33\hfill}{\scriptscriptstyle**\hfill}}$ & $17^{\stackrel{\textstyle31\hfill}{\scriptscriptstyle\hfill}}$ & $18^{\stackrel{\textstyle30\hfill}{\scriptscriptstyle\hfill}}$ & $19^{\stackrel{\textstyle29\hfill}{\scriptscriptstyle\hfill}}$ & - & - & - & - & - \\ 
+  CEU & $14^{\stackrel{\textstyle34\hfill}{\scriptscriptstyle***\hfill}}$ & $15^{\stackrel{\textstyle32\hfill}{\scriptscriptstyle**\hfill}}$ & $12^{\stackrel{\textstyle34\hfill}{\scriptscriptstyle***\hfill}}$ & $22^{\stackrel{\textstyle25\hfill}{\scriptscriptstyle\hfill}}$ & $23^{\stackrel{\textstyle24\hfill}{\scriptscriptstyle\hfill}}$ & $26^{\stackrel{\textstyle22\hfill}{\scriptscriptstyle\hfill}}$ & - & - & - & - \\ 
+  EV & $3^{\stackrel{\textstyle45\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $5^{\stackrel{\textstyle43\hfill}{\scriptscriptstyle***\hfill}}$ & $3^{\stackrel{\textstyle45\hfill}{\scriptscriptstyle***\hfill}}$ & $2^{\stackrel{\textstyle46\hfill}{\scriptscriptstyle***\hfill}}$ & $5^{\stackrel{\textstyle43\hfill}{\scriptscriptstyle***\hfill}}$ & $8^{\stackrel{\textstyle40\hfill}{\scriptscriptstyle***\hfill}}$ & - & - & - \\ 
+  MaxMin & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $4^{\stackrel{\textstyle44\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $0^{\stackrel{\textstyle48\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $5^{\stackrel{\textstyle43\hfill}{\scriptscriptstyle***\hfill}}$ & $16^{\stackrel{\textstyle32\hfill}{\scriptscriptstyle\hfill}}$ & - & - \\ 
+  MaxMax & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $3^{\stackrel{\textstyle45\hfill}{\scriptscriptstyle***\hfill}}$ & $2^{\stackrel{\textstyle46\hfill}{\scriptscriptstyle***\hfill}}$ & $2^{\stackrel{\textstyle46\hfill}{\scriptscriptstyle***\hfill}}$ & $3^{\stackrel{\textstyle45\hfill}{\scriptscriptstyle***\hfill}}$ & $4^{\stackrel{\textstyle44\hfill}{\scriptscriptstyle***\hfill}}$ & $10^{\stackrel{\textstyle37\hfill}{\scriptscriptstyle***\hfill}}$ & $18^{\stackrel{\textstyle29\hfill}{\scriptscriptstyle\hfill}}$ & - \\ 
+  MinReg & $0^{\stackrel{\textstyle48\hfill}{\scriptscriptstyle***\hfill}}$ & $0^{\stackrel{\textstyle48\hfill}{\scriptscriptstyle***\hfill}}$ & $2^{\stackrel{\textstyle46\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $0^{\stackrel{\textstyle48\hfill}{\scriptscriptstyle***\hfill}}$ & $0^{\stackrel{\textstyle48\hfill}{\scriptscriptstyle***\hfill}}$ & $3^{\stackrel{\textstyle45\hfill}{\scriptscriptstyle***\hfill}}$ & $13^{\stackrel{\textstyle35\hfill}{\scriptscriptstyle***\hfill}}$ & $17^{\stackrel{\textstyle31\hfill}{\scriptscriptstyle*\hfill}}$ & $20^{\stackrel{\textstyle28\hfill}{\scriptscriptstyle\hfill}}$ \\ 
+   \hline
+\end{tabular}
+\caption{Pairwise comparison of theories. Counts $m^{\textstyle n}$ mean that the row model is better for $m$ subjects and the column model is better for $n$ subjects. The fit is measured by predicted log likelihoods and significance levels are conventional (* $< .05$, ** $< .01$, *** $< .001$)} 
+\label{table3_sig_counts_all_models}
+\end{table*}
+
+
+
+% latex table generated in R 3.1.1 by xtable 1.7-4 package
+% Tue Jun 16 15:20:40 2015
+\begin{table}[!htb]
+\centering
+\begin{tabular}{rrrrr}
+  \hline
+ & mean$_{.1}$ & mean$_{.05}$ & mean & median \\ 
+  \hline
+SPT & -3.54 & -3.63 & -3.85 & -3.32 \\ 
+  MxEU & -3.64 & -3.75 & -3.92 & -3.30 \\ 
+  $\alpha$MM & -3.84 & -3.96 & -4.32 & -3.41 \\ 
+  MnEU & -4.15 & -4.20 & -4.31 & -4.10 \\ 
+  EU & -4.34 & -4.36 & -4.43 & -4.33 \\ 
+  CEU & -4.47 & -4.67 & -5.53 & -3.85 \\ 
+  DFT & -4.51 & -4.54 & -4.57 & -4.11 \\ 
+  EV & -11.82 & -11.73 & -11.50 & -11.80 \\ 
+  MaxMin & -13.56 & -13.43 & -13.31 & -14.26 \\ 
+  MaxMax & -14.46 & -14.27 & -14.06 & -14.44 \\ 
+  MinReg & -14.65 & -14.62 & -14.58 & -14.93 \\ 
+   \hline
+\end{tabular}
+\caption{Means, trimed means and medians for all models (sorted on trimed mean$_{.1}$).} 
+\label{table4_all_models_means}
+\end{table}
+
+
+\clearpage
+\section{PT analysis}
+\label{sec:pt-analysis}
+
+% latex table generated in R 3.1.1 by xtable 1.7-4 package
+% Tue Jun 16 15:20:40 2015
+\begin{table}[!htb]
+\centering
+\begin{tabular}{rrrrr}
+  \hline
+ & mean$_{.1}$ & mean$_{.05}$ & mean & median \\ 
+  \hline
+SPT$_{\pm}$ & -3.53 & -3.62 & -3.83 & -3.32 \\ 
+  SPT & -3.54 & -3.63 & -3.85 & -3.32 \\ 
+  SPT$_{u}$ & -3.56 & -3.67 & -3.92 & -3.37 \\ 
+  SCEU & -3.63 & -3.73 & -3.98 & -3.37 \\ 
+  SPT$_{NA}$ & -3.64 & -3.91 & -6.21 & -3.13 \\ 
+  SPT$_{2}$ & -3.87 & -4.06 & -4.91 & -3.03 \\ 
+  SPT$_{GE}$ & -3.92 & -4.09 & -4.28 & -3.12 \\ 
+  SPT$_{TK}$ & -4.19 & -4.27 & -4.39 & -4.16 \\ 
+  EU & -4.34 & -4.36 & -4.43 & -4.33 \\ 
+  PT & -5.10 & -5.67 & -14.42 & -3.84 \\ 
+  SCEV & -11.68 & -11.61 & -11.40 & -11.60 \\ 
+  SPT$_{\lambda = 1}$ & -11.74 & -11.66 & -11.45 & -12.04 \\ 
+   \hline
+\end{tabular}
+\caption{Means, trimed means and medians for all models (sorted on trimed mean$_{.1}$.} 
+\label{table_means_PT_models}
+\end{table}
+% latex table generated in R 3.1.1 by xtable 1.7-4 package
+% Tue Jun 16 15:20:41 2015
+\begin{table*}[!htb]
+\centering
+\begin{tabular}{rlllllllllll}
+  \hline
+ & SPT$_{\pm}$ & SPT & SPT$_{u}$ & SCEU & SPT$_{NA}$ & SPT$_{2}$ & SPT$_{GE}$ & SPT$_{TK}$ & EU & PT & SCEV \\ 
+  \hline
+SPT & $24^{\stackrel{\textstyle24\hfill}{\scriptscriptstyle\hfill}}$ & - & - & - & - & - & - & - & - & - & - \\ 
+  SPT$_{u}$ & $24^{\stackrel{\textstyle24\hfill}{\scriptscriptstyle\hfill}}$ & $22^{\stackrel{\textstyle26\hfill}{\scriptscriptstyle\hfill}}$ & - & - & - & - & - & - & - & - & - \\ 
+  SCEU & $25^{\stackrel{\textstyle23\hfill}{\scriptscriptstyle\hfill}}$ & $24^{\stackrel{\textstyle24\hfill}{\scriptscriptstyle\hfill}}$ & $25^{\stackrel{\textstyle23\hfill}{\scriptscriptstyle\hfill}}$ & - & - & - & - & - & - & - & - \\ 
+  SPT$_{NA}$ & $23^{\stackrel{\textstyle25\hfill}{\scriptscriptstyle\hfill}}$ & $24^{\stackrel{\textstyle24\hfill}{\scriptscriptstyle\hfill}}$ & $25^{\stackrel{\textstyle23\hfill}{\scriptscriptstyle\hfill}}$ & $26^{\stackrel{\textstyle22\hfill}{\scriptscriptstyle\hfill}}$ & - & - & - & - & - & - & - \\ 
+  SPT$_{2}$ & $17^{\stackrel{\textstyle31\hfill}{\scriptscriptstyle*\hfill}}$ & $16^{\stackrel{\textstyle32\hfill}{\scriptscriptstyle*\hfill}}$ & $19^{\stackrel{\textstyle29\hfill}{\scriptscriptstyle\hfill}}$ & $18^{\stackrel{\textstyle30\hfill}{\scriptscriptstyle\hfill}}$ & $23^{\stackrel{\textstyle25\hfill}{\scriptscriptstyle\hfill}}$ & - & - & - & - & - & - \\ 
+  SPT$_{GE}$ & $15^{\stackrel{\textstyle33\hfill}{\scriptscriptstyle**\hfill}}$ & $14^{\stackrel{\textstyle34\hfill}{\scriptscriptstyle**\hfill}}$ & $18^{\stackrel{\textstyle30\hfill}{\scriptscriptstyle\hfill}}$ & $17^{\stackrel{\textstyle31\hfill}{\scriptscriptstyle\hfill}}$ & $21^{\stackrel{\textstyle27\hfill}{\scriptscriptstyle\hfill}}$ & $22^{\stackrel{\textstyle26\hfill}{\scriptscriptstyle\hfill}}$ & - & - & - & - & - \\ 
+  SPT$_{TK}$ & $18^{\stackrel{\textstyle30\hfill}{\scriptscriptstyle**\hfill}}$ & $17^{\stackrel{\textstyle31\hfill}{\scriptscriptstyle**\hfill}}$ & $18^{\stackrel{\textstyle30\hfill}{\scriptscriptstyle*\hfill}}$ & $17^{\stackrel{\textstyle31\hfill}{\scriptscriptstyle**\hfill}}$ & $20^{\stackrel{\textstyle28\hfill}{\scriptscriptstyle\hfill}}$ & $19^{\stackrel{\textstyle29\hfill}{\scriptscriptstyle\hfill}}$ & $20^{\stackrel{\textstyle28\hfill}{\scriptscriptstyle\hfill}}$ & - & - & - & - \\ 
+  EU & $16^{\stackrel{\textstyle32\hfill}{\scriptscriptstyle*\hfill}}$ & $15^{\stackrel{\textstyle33\hfill}{\scriptscriptstyle*\hfill}}$ & $18^{\stackrel{\textstyle30\hfill}{\scriptscriptstyle*\hfill}}$ & $17^{\stackrel{\textstyle31\hfill}{\scriptscriptstyle*\hfill}}$ & $16^{\stackrel{\textstyle32\hfill}{\scriptscriptstyle\hfill}}$ & $18^{\stackrel{\textstyle30\hfill}{\scriptscriptstyle\hfill}}$ & $19^{\stackrel{\textstyle29\hfill}{\scriptscriptstyle\hfill}}$ & $19^{\stackrel{\textstyle29\hfill}{\scriptscriptstyle\hfill}}$ & - & - & - \\ 
+  PT & $13^{\stackrel{\textstyle35\hfill}{\scriptscriptstyle***\hfill}}$ & $13^{\stackrel{\textstyle35\hfill}{\scriptscriptstyle***\hfill}}$ & $15^{\stackrel{\textstyle33\hfill}{\scriptscriptstyle***\hfill}}$ & $14^{\stackrel{\textstyle34\hfill}{\scriptscriptstyle***\hfill}}$ & $15^{\stackrel{\textstyle33\hfill}{\scriptscriptstyle***\hfill}}$ & $14^{\stackrel{\textstyle34\hfill}{\scriptscriptstyle***\hfill}}$ & $14^{\stackrel{\textstyle34\hfill}{\scriptscriptstyle***\hfill}}$ & $17^{\stackrel{\textstyle31\hfill}{\scriptscriptstyle**\hfill}}$ & $23^{\stackrel{\textstyle25\hfill}{\scriptscriptstyle\hfill}}$ & - & - \\ 
+  SCEV & $0^{\stackrel{\textstyle48\hfill}{\scriptscriptstyle***\hfill}}$ & $2^{\stackrel{\textstyle46\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $5^{\stackrel{\textstyle43\hfill}{\scriptscriptstyle***\hfill}}$ & $2^{\stackrel{\textstyle46\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $4^{\stackrel{\textstyle44\hfill}{\scriptscriptstyle***\hfill}}$ & $4^{\stackrel{\textstyle44\hfill}{\scriptscriptstyle***\hfill}}$ & $9^{\stackrel{\textstyle39\hfill}{\scriptscriptstyle***\hfill}}$ & - \\ 
+  SPT$_{\lambda = 1}$ & $0^{\stackrel{\textstyle48\hfill}{\scriptscriptstyle***\hfill}}$ & $2^{\stackrel{\textstyle46\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $5^{\stackrel{\textstyle43\hfill}{\scriptscriptstyle***\hfill}}$ & $2^{\stackrel{\textstyle46\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $3^{\stackrel{\textstyle45\hfill}{\scriptscriptstyle***\hfill}}$ & $4^{\stackrel{\textstyle44\hfill}{\scriptscriptstyle***\hfill}}$ & $9^{\stackrel{\textstyle39\hfill}{\scriptscriptstyle***\hfill}}$ & $17^{\stackrel{\textstyle31\hfill}{\scriptscriptstyle\hfill}}$ \\ 
+   \hline
+\end{tabular}
+\caption{Pairwise comparison of the variations of Prospect Theory. Interpretation of the counts and significance levels are as in Table~\ref{table3_sig_counts_all_models}.} 
+\label{table5_sig_counts_PT_models}
+\end{table*}
+
+
+
+% latex table generated in R 3.1.1 by xtable 1.7-4 package
+% Tue Jun 16 15:20:41 2015
+\begin{table}[!htb]
+\centering
+\begin{tabular}{rlllllllll}
+  \hline
+ & SPT$_{\pm}$ & SPT & SPT$_{u}$ & SCEU & SPT$_{NA}$ & SPT$_{2}$ & SPT$_{GE}$ & SPT$_{TK}$ & PT \\ 
+  \hline
+MxEU & $20^{\stackrel{\textstyle28\hfill}{\scriptscriptstyle\hfill}}$ & $21^{\stackrel{\textstyle27\hfill}{\scriptscriptstyle\hfill}}$ & $24^{\stackrel{\textstyle24\hfill}{\scriptscriptstyle\hfill}}$ & $23^{\stackrel{\textstyle25\hfill}{\scriptscriptstyle\hfill}}$ & $18^{\stackrel{\textstyle30\hfill}{\scriptscriptstyle\hfill}}$ & $23^{\stackrel{\textstyle25\hfill}{\scriptscriptstyle\hfill}}$ & $22^{\stackrel{\textstyle26\hfill}{\scriptscriptstyle\hfill}}$ & $25^{\stackrel{\textstyle23\hfill}{\scriptscriptstyle\hfill}}$ & $29^{\stackrel{\textstyle19\hfill}{\scriptscriptstyle**\hfill}}$ \\ 
+  $\alpha$MM & $19^{\stackrel{\textstyle29\hfill}{\scriptscriptstyle**\hfill}}$ & $19^{\stackrel{\textstyle29\hfill}{\scriptscriptstyle*\hfill}}$ & $21^{\stackrel{\textstyle27\hfill}{\scriptscriptstyle\hfill}}$ & $22^{\stackrel{\textstyle26\hfill}{\scriptscriptstyle\hfill}}$ & $23^{\stackrel{\textstyle25\hfill}{\scriptscriptstyle\hfill}}$ & $25^{\stackrel{\textstyle23\hfill}{\scriptscriptstyle\hfill}}$ & $26^{\stackrel{\textstyle22\hfill}{\scriptscriptstyle\hfill}}$ & $28^{\stackrel{\textstyle20\hfill}{\scriptscriptstyle\hfill}}$ & $35^{\stackrel{\textstyle13\hfill}{\scriptscriptstyle***\hfill}}$ \\ 
+  MnEU & $14^{\stackrel{\textstyle34\hfill}{\scriptscriptstyle***\hfill}}$ & $13^{\stackrel{\textstyle35\hfill}{\scriptscriptstyle***\hfill}}$ & $18^{\stackrel{\textstyle30\hfill}{\scriptscriptstyle**\hfill}}$ & $17^{\stackrel{\textstyle31\hfill}{\scriptscriptstyle**\hfill}}$ & $17^{\stackrel{\textstyle31\hfill}{\scriptscriptstyle**\hfill}}$ & $20^{\stackrel{\textstyle28\hfill}{\scriptscriptstyle\hfill}}$ & $20^{\stackrel{\textstyle28\hfill}{\scriptscriptstyle\hfill}}$ & $19^{\stackrel{\textstyle29\hfill}{\scriptscriptstyle\hfill}}$ & $28^{\stackrel{\textstyle20\hfill}{\scriptscriptstyle\hfill}}$ \\ 
+  EU & $16^{\stackrel{\textstyle32\hfill}{\scriptscriptstyle**\hfill}}$ & $15^{\stackrel{\textstyle33\hfill}{\scriptscriptstyle**\hfill}}$ & $18^{\stackrel{\textstyle30\hfill}{\scriptscriptstyle**\hfill}}$ & $17^{\stackrel{\textstyle31\hfill}{\scriptscriptstyle**\hfill}}$ & $16^{\stackrel{\textstyle32\hfill}{\scriptscriptstyle\hfill}}$ & $18^{\stackrel{\textstyle30\hfill}{\scriptscriptstyle\hfill}}$ & $19^{\stackrel{\textstyle29\hfill}{\scriptscriptstyle\hfill}}$ & $19^{\stackrel{\textstyle29\hfill}{\scriptscriptstyle\hfill}}$ & $25^{\stackrel{\textstyle23\hfill}{\scriptscriptstyle\hfill}}$ \\ 
+  DFT & $16^{\stackrel{\textstyle32\hfill}{\scriptscriptstyle***\hfill}}$ & $16^{\stackrel{\textstyle32\hfill}{\scriptscriptstyle***\hfill}}$ & $18^{\stackrel{\textstyle30\hfill}{\scriptscriptstyle***\hfill}}$ & $18^{\stackrel{\textstyle30\hfill}{\scriptscriptstyle**\hfill}}$ & $19^{\stackrel{\textstyle29\hfill}{\scriptscriptstyle\hfill}}$ & $18^{\stackrel{\textstyle30\hfill}{\scriptscriptstyle\hfill}}$ & $18^{\stackrel{\textstyle30\hfill}{\scriptscriptstyle\hfill}}$ & $20^{\stackrel{\textstyle28\hfill}{\scriptscriptstyle\hfill}}$ & $23^{\stackrel{\textstyle25\hfill}{\scriptscriptstyle\hfill}}$ \\ 
+  CEU & $14^{\stackrel{\textstyle34\hfill}{\scriptscriptstyle***\hfill}}$ & $14^{\stackrel{\textstyle34\hfill}{\scriptscriptstyle***\hfill}}$ & $15^{\stackrel{\textstyle33\hfill}{\scriptscriptstyle***\hfill}}$ & $15^{\stackrel{\textstyle33\hfill}{\scriptscriptstyle***\hfill}}$ & $16^{\stackrel{\textstyle32\hfill}{\scriptscriptstyle***\hfill}}$ & $20^{\stackrel{\textstyle28\hfill}{\scriptscriptstyle**\hfill}}$ & $17^{\stackrel{\textstyle31\hfill}{\scriptscriptstyle***\hfill}}$ & $20^{\stackrel{\textstyle28\hfill}{\scriptscriptstyle\hfill}}$ & $28^{\stackrel{\textstyle20\hfill}{\scriptscriptstyle*\hfill}}$ \\ 
+  EV & $2^{\stackrel{\textstyle46\hfill}{\scriptscriptstyle***\hfill}}$ & $3^{\stackrel{\textstyle45\hfill}{\scriptscriptstyle***\hfill}}$ & $3^{\stackrel{\textstyle45\hfill}{\scriptscriptstyle***\hfill}}$ & $3^{\stackrel{\textstyle45\hfill}{\scriptscriptstyle***\hfill}}$ & $7^{\stackrel{\textstyle41\hfill}{\scriptscriptstyle***\hfill}}$ & $5^{\stackrel{\textstyle43\hfill}{\scriptscriptstyle***\hfill}}$ & $4^{\stackrel{\textstyle44\hfill}{\scriptscriptstyle***\hfill}}$ & $3^{\stackrel{\textstyle45\hfill}{\scriptscriptstyle***\hfill}}$ & $9^{\stackrel{\textstyle39\hfill}{\scriptscriptstyle***\hfill}}$ \\ 
+  MaxMin & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $4^{\stackrel{\textstyle44\hfill}{\scriptscriptstyle***\hfill}}$ & $4^{\stackrel{\textstyle44\hfill}{\scriptscriptstyle***\hfill}}$ & $4^{\stackrel{\textstyle44\hfill}{\scriptscriptstyle***\hfill}}$ & $3^{\stackrel{\textstyle45\hfill}{\scriptscriptstyle***\hfill}}$ & $7^{\stackrel{\textstyle41\hfill}{\scriptscriptstyle***\hfill}}$ \\ 
+  MaxMax & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $4^{\stackrel{\textstyle44\hfill}{\scriptscriptstyle***\hfill}}$ & $3^{\stackrel{\textstyle45\hfill}{\scriptscriptstyle***\hfill}}$ & $2^{\stackrel{\textstyle46\hfill}{\scriptscriptstyle***\hfill}}$ & $2^{\stackrel{\textstyle46\hfill}{\scriptscriptstyle***\hfill}}$ & $5^{\stackrel{\textstyle43\hfill}{\scriptscriptstyle***\hfill}}$ \\ 
+  MinReg & $0^{\stackrel{\textstyle48\hfill}{\scriptscriptstyle***\hfill}}$ & $0^{\stackrel{\textstyle48\hfill}{\scriptscriptstyle***\hfill}}$ & $0^{\stackrel{\textstyle48\hfill}{\scriptscriptstyle***\hfill}}$ & $0^{\stackrel{\textstyle48\hfill}{\scriptscriptstyle***\hfill}}$ & $3^{\stackrel{\textstyle45\hfill}{\scriptscriptstyle***\hfill}}$ & $2^{\stackrel{\textstyle46\hfill}{\scriptscriptstyle***\hfill}}$ & $2^{\stackrel{\textstyle46\hfill}{\scriptscriptstyle***\hfill}}$ & $1^{\stackrel{\textstyle47\hfill}{\scriptscriptstyle***\hfill}}$ & $6^{\stackrel{\textstyle42\hfill}{\scriptscriptstyle***\hfill}}$ \\ 
+   \hline
+\end{tabular}
+\caption{Variations of PT versus other models} 
+\label{table6_PT_variations_vs_other_models}
+\end{table}
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

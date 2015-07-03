@@ -1,0 +1,387 @@
+\documentclass[11pt, a4paper, oneside,final,notitlepage,onecolumn]{article}%
+\usepackage{amsmath}
+\usepackage{amssymb}
+% \usepackage{sw20lart}%
+% @@take out the above!?
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amsfonts}%
+\usepackage{graphicx}
+% TCIDATA{OutputFilter=latex2.dll}
+% TCIDATA{Version=5.00.0.2570}
+% TCIDATA{TCIstyle=Article/art4.lat,lart,article}
+% TCIDATA{LastRevised=Tuesday, October 12, 2010 11:16:48}
+% TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+% TCIDATA{<META NAME="SaveForMode" CONTENT="3">}
+% TCIDATA{Language=American English}
+\setlength{\oddsidemargin}{-0.00in}
+\setlength{\textwidth}{6.2in}
+\setlength{\topmargin}{-0.75in}
+\setlength{\textheight}{9.7in}
+\newtheorem{THEOREM}{\rm THEOREM}
+\newtheorem{DEFINITIO}[THEOREM]{\rm
+  DEFINITION}
+\newenvironment{DEFINITION}{\begin{DEFINITIO}
+    \rm}{\end{DEFINITIO}}
+\newtheorem{LEMMA}[THEOREM]{\rm LEMMA}
+\newtheorem{LEMMAX}[THEOREM]{\hspace{1 em}\rm LEMMA}
+\newtheorem{COROLLARY}[THEOREM]{\rm
+  COROLLARY}
+\newtheorem{COROLLARYX}[THEOREM]{\hspace{1 em}\rm
+  COROLLARY}
+\newtheorem{ASSUMPTIO}[THEOREM]{\rm
+  ASSUMPTION}
+\newenvironment{ASSUMPTION}{\begin{ASSUMPTIO}
+    \rm}{\end{ASSUMPTIO}}
+\newtheorem{REMAR}[THEOREM]{\rm REMARK}
+\newenvironment{REMARK}{\begin{REMAR}
+    \rm}{\end{REMAR}}
+\newtheorem{CLAI}[THEOREM]{\rm
+  CLAIM}
+\newenvironment{CLAIM}{\begin{CLAI}
+    \rm}{\end{CLAI}}
+\newtheorem{CONCLUSION}[THEOREM]{\rm
+  CONCLUSION}
+\newtheorem{OBSERVATION}[THEOREM]{\rm
+  OBSERVATION}
+\newtheorem{PROPOSITION}[THEOREM]{\rm
+  PROPOSITION}
+\newtheorem{EXAMPL}[THEOREM]{\rm EXAMPLE}
+\newenvironment{EXAMPLE}{\begin{EXAMPL}
+    \rm}{\end{EXAMPL}}
+\newcounter{AA}
+\newcounter{subsectio}
+\newcounter{sectio}
+\def\xt{\par\hangafter=
+  1\hangindent=\parindent\noindent}
+\renewcommand{\baselinestretch}{2}
+\newcommand{\ga}{\alpha}
+\newcommand{\xb}{\beta}
+\newcommand{\xg}{\gamma}
+\newcommand{\gd}{\delta}
+\newcommand{\gdd}{\Delta}
+\newcommand{\xe}{\epsilon}
+\newcommand{\gf}{\varphi}
+\newcommand{\gk}{\kappa}
+\newcommand{\gl}{\lambda}
+\newcommand{\gm}{\mu}
+\newcommand{\gn}{\nu}
+\newcommand{\gp}{\pi}
+\newcommand{\gpp}{\Pi}
+\newcommand{\gr}{\rho}
+\newcommand{\gs}{\sigma}
+\newcommand{\gss}{\Sigma}
+\newcommand{\gt}{\tau}
+\newcommand{\gw}{\omega}
+\newcommand{\gww}{\Omega}
+\newcommand{\Naoud}{I\hspace{-0.193em}N}
+\newcommand{\Roud}{I\hspace{-0.26em}R}
+\newcommand{\Na}{I\kern -3pt N}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\cir}{\!\circ\!}
+\newcommand{\bd}{$\bullet$}
+\newcommand{\elt}{\!\in\!}
+\newcommand{\ggeq}{\geqslant}
+\newcommand{\ve}{\!\vee\!}
+\newcommand{\wedg}{\!\wedge\!}
+\newcommand{\E}{\exists}
+\newcommand{\ep}{~\hfill $\square$}
+\newcommand{\ey}{\emptyset}
+\newcommand{\FA}{\forall}
+\newcommand{\iy}{\infty}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Lra}{\Leftrightarrow}
+\newcommand{\lleq}{\leqslant}
+\newcommand{\mo}{\mapsto}
+\newcommand{\noi}{\noindent}
+\newcommand{\p}{\succcurlyeq}
+\newcommand{\rp}{\preccurlyeq}
+\newcommand{\srp}{\prec}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\sbs}{\subset}
+\newcommand{\sps}{\supset}
+\newcommand{\SA}{{\cal A}}
+\newcommand{\SB}{{\cal B}}
+\newcommand{\SC}{{\cal C}}
+\newcommand{\SD}{{\cal D}}
+\newcommand{\SF}{{\cal F}}
+\newcommand{\SP}{{\cal P}}
+\newcommand{\SQ}{{\cal Q}}
+\newcommand{\ST}{{\cal T}}
+\newcommand{\SU}{{\cal U}}
+% BeginMSIPreambleData
+\ifx\pdfoutput\relax\let\pdfoutput=\undefined\fi
+\newcount\msipdfoutput
+\ifx\pdfoutput\undefined\else
+\ifcase\pdfoutput\else
+\msipdfoutput=1
+\ifx\paperwidth\undefined\else
+\ifdim\paperheight=0pt\relax\else\pdfpageheight\paperheight\fi
+\ifdim\paperwidth=0pt\relax\else\pdfpagewidth\paperwidth\fi
+\fi\fi\fi
+% EndMSIPreambleData
+
+% % \usepackage{changepage}
+% \usepackage{rotating}
+\renewcommand{\tabcolsep}{3pt}
+
+\usepackage{longtable}
+%% \usepackage{rotating} 
+%% \renewenvironment{table*}[1][1]{
+%%   % \setlength{\columnsep}{1pt}  
+%%   % \renewcommand{\tabcolsep}{2pt}
+%% \begin{table}[#1]\footnotesize
+%%   \begin{adjustwidth}{-0.2cm}{}
+%%   }{
+%%   \end{adjustwidth}
+%% \end{table}}
+
+\renewcommand{\thetable}{WA\arabic{table}}
+\renewcommand{\thefigure}{WA\arabic{figure}}
+
+\begin{document}
+
+\title{\vspace{-1\baselineskip}\textbf{Web Appendix to:\\
+ An Experimental Test of Prospect Theory for Predicting Choice under Ambiguity\vspace{0\baselineskip}}}
+\author{Amit Kothiyal$^a$, Vitalie Spinu$^b$, \& Peter P.\ Wakker$^b$\\
+  $^a$ Max Planck Institute for Human Development,
+  Lentzeallee 94,\\ 14195 Berlin, Germany\\
+  $^b$ Econometric Institute, Erasmus University,
+  \\P.O.\ Box 1738, Rotterdam, 3000 DR, the Netherlands\\~}
+
+ \date{\vspace{0\baselineskip}December, 2012}
+\maketitle
+
+We discuss the fitting procedure in more detail, and report the median values of individual parameters that we estimated for various models. For source prospect theory (SPT) we provide all the parameter estimates for all subjects. We conclude with the model tournament table computed based on different fitting/test splits of the data (cross validation) than that of HLM.  References and notation are as in the main text.
+
+<< init, include = F>>=
+
+library(knitr)
+opts_chunk$set(echo = F, results = "asis", echo = F, warning = F, cache = F)
+library(plyr)
+library(reshape2)
+library(xtable)
+library(ggplot2)
+source("../utils.R")
+load("../data/data.RData")
+load("../estim/res_ind.RData")
+load("../estim/res_PT.RData")
+attach(data_ind)
+
+loc_res <- sane_names(res_PT[nms_all])
+opts_chunk$set(echo = F, results = "asis", echo = F, warning = F, cache = F)
+options(xtable.table.placement = "!htb")
+main_PT_models <- grep("lambda|SCEV", names(loc_res), invert = T, val = T)
+
+@ 
+
+
+\section{Additional remarks on the estimation method}
+\label{sec:design}
+
+As pointed out in the main text, all models were fit individual by individual, and predicted likelihoods were used to compare the models. We here follow the technique used by HLM (Hey, Lotito, \& Maffioletti 2010). Some additional remarks are due. 
+
+The advantage of fitting the data individual by individual is mainly computational -- the number of parameters estimated are in the range of 3-10 per subject, which given the amount of choice data (135 binary responses per subject) gives a stable fit for most cases. Moreover, the maximum likelihood optimization algorithm (we used Nelder-Mead) converges fast. The disadvantage of individual fitting is two-fold.
+
+First, individual fitting does not take into account the information about the choices and parameters of other subjects. In statistics, taking such information into account is known as a collective inference -- given the parameters or choices of a group of subjects we can infer the parameters and predict choices of other individuals. Thus it may be interesting to to pool all the data and estimate the parameters for all individuals at the same time. This procedure obviously requires additional assumptions at the population level. Mixed effect models and hierarchical Bayesian inference are two standard approaches that can be used. We estimated a mixed effect for SPT and it gave results  virtually identical to the individual by individual estimates. Because the optimization procedure is very complex (240 parameters and more than 400 inequality restrictions) and does not give an obvious gain over the individual by individual estimation we did not pursue this method further.
+
+The second problem of individual by individual estimation is that it can lead to overfitting.  It does so for several subjects for almost all models we considered. It happens when a subject's choice data (used for fitting) is fit ``too'' well by a deterministic model and, hence, the $\sigma$ parameter (representing the model fitting error) becomes too small. As a consequence the model generalizes poorly and predicts very poorly on the test set. To address this issue, HLM removed subject 35 who gave very bad predicted log-likelihoods for multiple prior models.\footnote{Tables~\ref{table_A_mean_plike} and~\ref{table_A_winners_with_SPT} below are counterparts to Tables~1 and~2 from the main text with the subject 35 included.} An alternative way out is to use more robust measures of central tendency, such as medians or trimmed means, and to perform  non-parametric statistical tests without removing any subjects, as reported in the main text.  
+ %v.k. refer to table in paper after publication.
+
+To reduce the impact of overfitting, HLM also restricted the error parameter $\sigma$ by imposing the lower bound of $0.01$ for all models. We follow the same strategy in our estimations. This is not a serious restriction as it affects only a small number of individuals for our main model, SPT, as can be seen in Figure~\ref{fig:sigma_par_boxplot}. It is also empirically plausible to assume a minimal level of error and no perfect fit.  In general, the more parameters a model has, the more prone it is to overfitting, and the more subjects will have an estimated sigma equal to the lower bound.  We similarly imposed an additional restriction on prospect theory models
+ -- we did not allow the individual loss aversion parameter $\lambda$ to exceed $40$.  Again, this is empirically plausible and it avoids degenerate estimates.
+
+<<sigma_par_boxplot,  fig.cap = "Boxplots of estimats of the error parameter $\\sigma$ for all variations of PT considered in the papper. The body of each box is formed by 25\\%, 50\\% and 75\\% quantiles. The upper whisker is given by the largest observation smaller than 25\\% quantile plus 1.5*IQR (inter-quantile range). Observations larger than this number are considered outliers. Lower whiskers are defined symmetrically.">>=
+
+print(P("sig", loc_res[main_PT_models]) +
+      geom_boxplot(aes(fill = Treatment)) + coord_flip() + 
+      guides(fill = guide_legend(reverse = T)) + ylab(expression(sigma)))
+  
+@ 
+
+
+We also reproduce Tables 1 and 2 from the main text with subject 35 included.  The  MnEU and $\alpha$MM  models are seriously affected by this inclusion.
+
+<<tables_with_35>>=
+
+tplike <- sane_names(cbind(HLM_pll, PT_w_no_u = res_ind$PT_w_no_u$lpred))
+means_df <- rbind(All = colMeans(tplike), do.call(rbind, by(tplike, treatments, numcolwise(mean))))
+
+means_df <- means_df[, order(means_df[1, ], decreasing = T)]
+
+print_tables(means_df, "_A_mean_plike", 
+             "Mean predicted log likelihoods for the three treatments, and overall (subject 35 included).")
+
+print_tables(get_max_df(tplike, treatments),
+             "_A_winners_with_SPT",  "Number of subject for whom a theory predicts best (subject 35 included).", digits = 0)
+
+@ 
+
+\section{Predicted likelihoods for Prospect Theory models}
+\label{sec:pred-likel-prosp}
+
+Table~\ref{table_means_PT_models}\footnote{The aggregated predicted likelihoods of $SPT$ and $SPT_{\pm}$ differ in their third decimals.  Individual predicted likelihoods are also very close.} presents medians and trimmed means of predicted likelihood for all variations of prospect theory.
+
+<<PT_like>>=
+
+tplike <- sane_names(as.data.frame(sapply(res_PT[nms_all], "[[", "lpred")))
+tplike[, "EU"] <- HLM_pll[, "EU"] ## use HLM's lpred
+tplike <- tplike[order(colwise(mean)(tplike, trim = .1), decreasing = T)]
+print_tables(get_central_df(tplike),
+             "_means_PT_models", "Means, trimmed means and medians for all PT models (sorted on trimmed mean$_{.1})$.")
+
+@
+
+
+\section{Parameter estimates}
+\label{sec:indiv-param}
+
+This section reports on the actual parameter values that we obtained when fitting PT.
+Table~\ref{table_A1_median_pars} reports the median parameters estimated based on the fit/test data split of HLM. The meaning of the parameters is as follows. Subjective probabilities of the source method are denoted $p_{1}, p_{2}$, non-additive weights for general PT are denoted $w_{1}, \ldots, w_{23}$, the utility parameter is $u$ (normalized utility of 10, where $U(100)=1$), loss aversion is $\lambda$ (normalized utility of $-10$), $\alpha$ and $\beta$ are the model dependent parameters of the weighting functions as defined in the main text, $\alpha_{-}$ is the parameter of the Prelec one-parameter weighting used for negative outcomes in SPT$_{\pm}$ 
+%% \footnote{$a=\alpha, b=\beta$ for Prelec two-parameter family; $a=\alpha, b=\beta$ for the Neo-additive family , $a=\gamma, b=\delta$ for the GE family, and $a=\alpha$ in single parameter Prelec family; $\gamma$ for Tversky \& Kahneman family. }
+, $\sigma$ is the estimated value of the error parameter, and $lfit$ and $lpred$ are the medians of the fitted and predicted likelihoods of the model concerned.
+
+
+It is remarkable that the utility parameter (loss aversion in PT) is very large for all the models. In models that do not allow for loss aversion, utility tries to compensate for loss aversion. We inspected the individual choices, and they revealed that subjects are indeed extremely loss averse.  They mostly minimized the likelihood of losing, almost without trading it off against gaining $\pounds 100$ instead of $\pounds 10$.  For example, in the choice between (Yellow: 100, Blue: $-10$, Pink: $-10$) and (Yellow: 10, Blue: $10$, Pink: $-10$), the numbers of subjects who preferred the former and the latter were, respectively: 2 versus 13 in Treatment 1, 2 versus 15 in Treatment 2, and 4 versus 12 in Treatment 3.  The majority preferences weight a loss of $-10$ instead of the middle outcome 10 on the unlikely event blue way more than a gain of 100 versus the middle outcome 10 on the likely event yellow.
+ % Choice no 10 in Amit's tables.
+For instance, if probability weighting plays no role and if utility is linear outside of $0$, then the majority preferences in this choice imply loss aversion to exceed $(9-1) \times 5/3) > 13$.  Thus the very high loss aversion found reflects a genuine phenomenon in the data and is not a misestimation due to the model formulation or to the fitting procedure.
+
+
+<<individual_pars>>=
+
+sane_par_names <- function(x){  
+  names(x) <- 
+    gsub("^a", "$\\\\alpha$", 
+         gsub("^b$", "$\\\\beta$", 
+              gsub("sig", "$\\\\sigma$", 
+                   gsub("^l$", "$\\\\lambda$", 
+                        gsub("([0-9]+)", "$_{\\1}$", 
+                             gsub("a1", "$\\\\alpha_{-}$", names(x)))))))
+  x
+}
+
+res_med <- do.call(rbind.fill, 
+                   sapply(loc_res, colwise(function(x) median(x, na.rm= T))))
+rownames(res_med) <- names(loc_res)
+par_nms <- names(res_med)[!names(res_med) %in% c("sig", "lfit", "lpred", "conver", "iter")]
+res_med <- res_med[c(par_nms, "sig", "lfit", "lpred")]
+res_med <- sane_par_names(res_med)
+
+print_tables(res_med[order(res_med$lpred, decreasing = T), ], "_A1_median_pars", 
+             caption = "Medians of estimated parameters across subjects")
+
+## res_mean <- do.call(rbind.fill, 
+##                     sapply(loc_res, colwise(function(x) mean(x, na.rm= T, trim = .1))))
+## res_mean <- res_mean[c(par_nms, "sig", "lfit", "lpred")]
+## rownames(res_mean) <- names(loc_res)
+
+
+## print_tables(res_[order(res_mean$lpred, decreasing = T), ], caption = "Trimmed (0.1) means of estimated parameters across subjects")
+
+@ 
+
+
+For our central model, SPT, the estimated parameters are provided in Table~\ref{table_A2_median_pars}. Recall that treatment 1 is associated with the least ambiguity, and treatment 3 with the most. This is confirmed by the variation of the estimated belief parameters, which increases with the ambiguity of the treatment. Boxplots in Figures~\ref{fig:p1_boxplot} and~\ref{fig:p2_boxplot} illustrate this point for subjective probabilities of the events $\{pink\}$ and $\{blue\}$. There is less agreement on the probabilities of the events in the third treatment than in the first two.
+
+\clearpage 
+
+<<PT_indiv_parameters>>=
+
+print_tables(sane_par_names(res_PT$PT_w_no_u[, 1:7]), "_A2_median_pars",
+             "Individual parameters for SPT for all 48 subjects", 
+             tabular.environment="longtable")
+
+@ 
+
+<<p1_boxplot, fig.cap = "Individual estimates of the subjective probability of the pink ball (objective probability $0.2$)">>=
+
+print(P("p1", loc_res[main_PT_models]) + 
+      geom_boxplot(aes(fill = Treatment)) + coord_flip() + ylab(expression(p[1])) +
+      guides(fill = guide_legend(reverse = T))
+)
+
+@ 
+
+
+<<p2_boxplot, fig.cap = "Individual estimates of the subjective probability of the blue ball (objective probability $0.3$)">>=
+
+print(P("p2", loc_res[main_PT_models]) + 
+      geom_boxplot(aes(fill = Treatment)) + coord_flip() +  ylab(expression(p[2])) + 
+      guides(fill = guide_legend(reverse = T)))
+
+@ 
+
+It is also remarkable that the probability weighting parameters (reflecting ambiguity attitudes here) in general suggest more  S-shaped weighting than  inverse S-shaped weighting, deviating from the common findings in the literature (also for ambiguity).  This is similar to HLM's finding that maxmax EU fits very well, and maxmin does worse.  Both these findings suggest that these data contain more optimism than pessimism in event weighting, in deviation from findings in other papers.  HLM give no explanation for this unusual finding.  We have no explanation for it either, and we can only confirm HLM's finding here.
+
+\section{Cross Validation}
+\label{sec:cross-validation}
+
+As an additional test of our main hypothesis (that SPT performs best on this given dataset) and to rule out the posibility that our findings are a consequence of the particular fit/test data split, we performed a cross-validation analysis. We randomly split the total of 162 questions in 10 roughly equal batches. For each batch $i\in\{1, \ldots, 10\}$ we estimated the parameters of all the models excluding batch $i$. Then we computed the predicted
+ log-likelihood on the test batch $i$. To aggregate the predicted
+ log-likelihood across 10 batches, we used medians (Table~\ref{table_ACV1_cros_val_median}) and trimmed(0.1) means (Table~\ref{table_ACV2_cros_val_mean_.1}). The results of this analysis are very similar to those presented in the main text.  This finding confirms that the choice of the test and prediction samples of HLM, followed by us in the main text, are representative.
+
+
+<<cross_validation>>=
+load("../estim/res_CV.RData")
+
+get_stats_from_CV <- function(res_CV, func)
+  do.call(rbind,
+          lapply(seq_along(res_CV), function(i){
+            out <- do.call(rbind.fill, sapply(res_CV[[i]], colwise(func)))
+            imp_nm <- names(out) %in% c("lpred", "lfit")
+            cbind(model = names(res_CV[[i]]), out[c("lpred", "lfit")], out[!imp_nm], batch = i)
+          }))
+
+
+lpred <- lapply(res_CV, sapply, "[[", "lpred")
+lpred <- lapply(lpred, 
+                function(mat) {
+                  df <- as.data.frame(mat)
+                  df <- df[grep("delta|hex", names(df), invert = T)]
+                  rename(df, c(PT = "PT_u", PT_w = "PT_w_u", CEU_w = "CEU_w_u"), warn_missing = F)
+                })
+
+for(i in seq_along(lpred))
+  lpred[[i]][lpred[[i]] == -Inf] <- -500
+
+
+get_centrals_cv <- function(fun, ...){
+  out <- lpred[[1]]
+  for(r in 1:nrow(out))
+    for(c in 1:ncol(out))
+      out[r, c] <- do.call(fun, list(unlist(lapply(lpred, "[[", r, c)), ...))
+  sane_names(as.data.frame(out))
+}
+
+lpred_medians <- get_centrals_cv(median)
+lpred_medians <- lpred_medians[order(colwise(median)(lpred_medians), decreasing = T)]
+print_tables(count_sig(lpred_medians),
+             "_ACV1_cros_val_median",
+             "Winner counts with Wilkinson statistics (based on median predicted log-likelihood across 10 batches).")
+
+
+lpred_means <- get_centrals_cv(mean, trim = .1)
+lpred_means <- lpred_means[order(colwise(median)(lpred_means), decreasing = T)]
+print_tables(count_sig(lpred_means),
+             "_ACV2_cros_val_mean_.1",
+             "Winner counts with Wilkinson statistics (based on trimmed (0.01) mean of predicted log-likelihood across 10 batches).")
+
+@ 
+
+\end{document}
+
+
+
+%%% Local Variables: 
+%%% TeX-master: t
+%%% End: 
+
+
+
+
+
+
+
+9
+
+
