@@ -56,7 +56,7 @@ subject. Subjects were recruited using the ORSEE (Greiner 2004) software and the
 experiment was conducted in the EXEC laboratory at the University of York using
 purpose-written software written in Visual Basic 6.
 
-* Dictionary of the Variable in HLM.csv
+* Dictionary of the Variables in HLM.csv
 
  |-----------+---------+----------------------------------------------------------|
  | Variable  | Type    | Description                                              |
