@@ -16,7 +16,7 @@ make_data_env <- function(qPredict = NULL){
         ## Reconstruct old version of the data:
         hlm <- read.csv("./data/HLM.csv")
         ## We were not aware that there were 15 indifferences 
-        hlm <- within(hlm, Choice <- Choice != "L")
+        hlm <- within(hlm, Choice <- Choice != "R")
         library(reshape2)
         hlmWide <- dcast(hlm, Subject + Treatment ~ Question, value.var = "Choice")
         choiceData <- as.matrix(hlmWide[, -c(1, 2)])

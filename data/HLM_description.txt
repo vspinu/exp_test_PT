@@ -1,18 +1,17 @@
+* DATA FROM
 
- # ---------------------------------------------------------------------------- #
- #                                                                              #
- #                                  DATA FROM                                   #
- #                                                                              #
- #             John D. Hey, Gianna Lotito, Anna Maffioletti (2010)              #
- #                                                                              #
- # The descriptive and predictive adequacy of theories of decision making under #
- #                            uncertainty/ambiguity                             #
- #                                                                              #
- #                 Journal of Risk and Uncertainty, 41, 81–111.                 #
- #                                                                              #
- # ---------------------------------------------------------------------------- #
+Hey, John D., Gianna Lotito, Anna Maffioletti (2010)
+“The Descriptive and Predictive Adequacy of Theories of Decision Making under Uncertainty/Ambiguity”
+Journal of Risk and Uncertainty 41, 81–111.
+Also used by
+Kothiyal, Amit, Vitalie Spinu, & Peter P. Wakker (2014)
+“An Experimental Test of Prospect Theory for Predicting Choice under Ambiguity”
+Journal of Risk and Uncertainty 48, 1-17.
 
- 
+Reproduced here with permission of the owners of this data set:
+John D. Hey, Gianna Lotito, & Anna Maffioletti
+
+
 * Description of the Experiment
 
 The bingo blower used in the experiment contained pink, yellow and blue balls in

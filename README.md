@@ -3,10 +3,10 @@ Code and data for [An experimental test of prospect theory for predicting choice
 
 ## Data
 
-Original data in csv format is in `./data/` subdirectory. Running `data_init.R`
+Original data in csv format is in `./data/` subdirectory. Sourcing `data_init.R`
 will transform the original data and produce the binary file `./data/data.RData`
-that contains enviroments with matrix representation of the data suitable for
-the analysis.
+containing enviroments with matrix representation of the data suitable for the
+analysis.
 
 
 ## Running Models
